@@ -32,7 +32,7 @@
     <h2>1. 데이터를 출력하는 기본 구문</h2>
     <p>
         1) window.alert('알림창에 출력할 문구'); <br>
-        2) window.console.log(콘솔창에 출력할 문구); <br>
+        2) window.console.log('콘솔창에 출력할 문구'); <br>
         3) document.write('화면에 출력할 문구'); <br>
         4) 선택한요소.innerHTML/innerText = '해당 요소에 출력할 문구';
     </p>
@@ -66,7 +66,7 @@
         자바스크립트에서 어떤 요소(Element)안의 값(Content)을 가지고 온다거나 <br>
         변경하고자 할 때 <b>innerHTML, innerText</b>라는 속성에 접근 <br>
         => 가지고 올 때 : 변수 = 선택한요소.innerHTML/innerText; <br>
-        => 변경하고자 하 때 : 선택한요소.innerHTML/innerText = '변경할 값';
+        => 변경하고자 할 때 : 선택한요소.innerHTML/innerText = '변경할 값';
     </div>
 
     <button onclick="tagValue()">확인</button>
@@ -113,7 +113,7 @@
 <h2>2. 데이터를 입력받는 기본 구문(변수에 대입 가능)</h2>
 
 <p>
-    1) 변수 = window.confrim("질문내용"); <br>
+    1) 변수 = window.confirm("질문내용"); <br>
     2) 변수 = window.prompt("질문내용"); <br>
     3) 변수 = 선택한요소.속성;(id, className, innerHTML, innerText, ...); <br>
     4) 변수 = 선택한input요소.value;
@@ -121,7 +121,7 @@
 
 <h3>1) window.confirm('질문내용')</h3>
 <p>
-    confirm 호출 시 "질문 내용"과 "확인/취소" 보튼이 존재하는 알림창 발생 <br>
+    confirm 호출 시 "질문 내용"과 "확인/취소" 버튼이 존재하는 알림창 발생 <br>
     확인 버튼 클릭 시 true값, 취소 버튼 클릭 시 false 반환
 </p>
 
@@ -132,7 +132,7 @@
 
         var result = confirm('졸리면 확인, 아니면 취소를 누르세요.');
 
-        console.log(result); // 확인 / 취;소 결과값 확인
+        console.log(result); // 확인 / 취소 결과값 확인
 
         var divEl = document.getElementById('area2');
 
@@ -164,10 +164,8 @@
             console.log(address);
             // xx에 사시는 xxx님의 방문을 환영합니다 ^^ 형태로 div요소 내부에 출력
             var divEl = document.getElementById('area3');
-            divEl.innerHTML = '<b>' + address + '에 사시는 ' + name + '님의 방문을 환엽합니다 ^^ </b>'
+            divEl.innerHTML = '<b>' + address + '에 사시는 ' + name + '님의 방문을 환영합니다 ^^ </b>'
         }
-
-
     </script>
 
     <button onclick = "testPrompt2()">숫자입력</button>
@@ -186,9 +184,8 @@
             for(var i = 0; i < num ; i++){
                 str += '<li>안녕하세요</li>'
             }
-            ulEl.innerHTML += str;
+            ulEl.innerHTML = str;
             // 사용자가 입력한 값 만큼 li요소
-            
         }
     </script>
 
@@ -213,6 +210,16 @@
             inputId.value = '너는 이제 아이디를 쓸 수 없어!!';
         }
     </script>
+
+
+
+
+
+
+
+    <br><br>
+    <a href="00_index.html">인덱스로</a>
+
 
 </body>
 </html>

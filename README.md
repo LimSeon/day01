@@ -22,7 +22,7 @@ JavaScript 수업 내용 정리
     2) document
 1. 데이터 출력하는 기본 구문
     1) window.alert('알림창에 출력할 문구');
-    2) window.console.log(콘솔창에 출력할 문구);
+    2) window.console.log('콘솔창에 출력할 문구');
     3) document.write('화면에 출력할 문구');
     4) 선택한요소.innerHTML/innerText = '해당 요소에 출력할 문구';
 2. 데이터를 입력받는 기본 구문(변수에 대입 가능)
